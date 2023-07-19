@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/95701d90ff.js" crossorigin="anonymous"></script>
     <title>Spotify Web</title>
     <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
 </head>
@@ -46,62 +47,140 @@
             </div>
             <div class="principal">
                 <nav>
-                    <a href="#">Lorem</a>
-                    <a href="#">Lorem</a>
-                    <a href="#">Lorem</a>
-                    <a href="#">Lorem</a>
-                    <a href="#">Lorem</a>
+                    <a href="#">In evidenza</a>
+                    <a href="#">Podcast</a>
+                    <a href="#">Classifiche</a>
+                    <a href="#">Generi e mood</a>
+                    <a href="#">Nuove uscite</a>
+                    <a href="#">Scopri</a>
                 </nav>
 
+                <!-- Recently played -->
                 <section>
-                    <h2>Name Section</h2>
+                    <div class="name-section">
+                        <h2>Recently played</h2>
+                    </div>
                     <div class="row">
                         <div class="col-2 col-md-3 col-s-6">
-                            <div class="card"></div>
+                            <div class="card">
+                                <div class="cover">
+                                    <img src="./assets/img/metal_lifting.jpg" alt="album-cover">
+                                    <a href="#"><i class="fa-regular fa-circle-play"></i></a>
+                                </div>
+                                <a href="#" class="title">Heavy Metal</a>
+                                <div class="author">Subtitle</div>
+                            </div>
                         </div>
                         <div class="col-2 col-md-3 col-s-6">
-                            <div class="card"></div>
+                            <div class="card">
+                                <div class="cover">
+                                    <img src="./assets/img/stranger.jpeg" alt="album-cover">
+                                    <a href="#"><i class="fa-regular fa-circle-play"></i></a>
+                                </div>
+                                <a href="#" class="title">Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</a>
+                                <div class="author">Kyle Dixon & Michael Stein</div>
+                            </div>
                         </div>
                         <div class="col-2 col-md-3 col-s-6">
-                            <div class="card"></div>
+                            <div class="card">
+                                <div class="cover">
+                                    <img src="./assets/img/aquietplace.jpeg" alt="album-cover">
+                                    <a href="#"><i class="fa-regular fa-circle-play"></i></a>
+                                </div>
+                                <a href="#" class="title">A quiet place</a>
+                                <div class="author">Subtitle</div>
+                            </div>
                         </div>
                         <div class="col-2 col-md-3 col-s-6">
-                            <div class="card"></div>
+                            <div class="card">
+                                <div class="cover">
+                                    <img src="./assets/img/split.jpeg" alt="album-cover">
+                                    <a href="#"><i class="fa-regular fa-circle-play"></i></a>
+                                </div>
+                                <a href="#" class="title">Split</a>
+                                <div class="author">Subtitle</div>
+                            </div>
                         </div>
                         <div class="col-2 col-md-3 col-s-6">
-                            <div class="card"></div>
+                            <div class="card">
+                                <div class="cover">
+                                    <img src="./assets/img/cure.jpeg" alt="album-cover">
+                                    <a href="#"><i class="fa-regular fa-circle-play"></i></a>
+                                </div>
+                                <a href="#" class="title">A cure for wellness</a>
+                                <div class="author">Subtitle</div>
+                            </div>
                         </div>
                         <div class="col-2 col-md-3 col-s-6">
-                            <div class="card"></div>
+                            <div class="card">
+                                <div class="cover">
+                                    <img src="./assets/img/sinister.jpeg" alt="album-cover">
+                                    <a href="#"><i class="fa-regular fa-circle-play"></i></a>
+                                </div>
+                                <a href="#" class="title">Sinister</a>
+                                <div class="author">Subtitle</div>
+                            </div>
                         </div>
-
                     </div>
                 </section>
 
+                <!-- Creato per -->
                 <section>
-                    <h2>Name Section</h2>
+                    <div class="name-section">
+                        <h2>Creato per John Doe</h2>
+                        <div class="author">Più ascolti, più accurati saranno i suggerimenti.</div>
+                    </div>
                     <div class="row">
                         <div class="col-2 col-md-3 col-s-6">
-                            <div class="card"></div>
+                            <div class="card">
+                                <div class="cover">
+                                    <img src="./assets/img/radar.jpeg" alt="album-cover">
+                                    <a href="#"><i class="fa-regular fa-circle-play"></i></a>
+                                </div>
+                                <a href="#" class="title">Release radar</a>
+                            </div>
                         </div>
                         <div class="col-2 col-md-3 col-s-6">
-                            <div class="card"></div>
+                            <div class="card">
+                                <div class="cover">
+                                    <img src="./assets/img/mixdaily.jpeg" alt="album-cover">
+                                    <a href="#"><i class="fa-regular fa-circle-play"></i></a>
+                                </div>
+                                <a href="#" class="title">Daily Mix 1</a>
+                            </div>
                         </div>
-                        <div class="col-2 col-md-3 col-s-6">
-                            <div class="card"></div>
-                        </div>
-                        <div class="col-2 col-md-3 col-s-6">
-                            <div class="card"></div>
-                        </div>
-                        <div class="col-2 col-md-3 col-s-6">
-                            <div class="card"></div>
-                        </div>
-                        <div class="col-2 col-md-3 col-s-6">
-                            <div class="card"></div>
-                        </div>
-
                     </div>
                 </section>
+
+                <!-- Artisti -->
+                <section id="artists">
+                    <div class="name-section">
+                        <h2>Artisti più popolari</h2>
+                        <div class="author">Più ascolti, più accurati saranno i suggerimenti.</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2 col-md-3 col-s-6">
+                            <div class="card">
+                                <div class="cover">
+                                    <img src="./assets/img/youg.jpeg" alt="album-cover">
+                                    <a href="#"><i class="fa-regular fa-circle-play"></i></a>
+                                </div>
+                                <a href="#" class="title">Youg</a>
+                            </div>
+                        </div>
+                        <div class="col-2 col-md-3 col-s-6">
+                            <div class="card">
+                                <div class="cover">
+                                    <img src="./assets/img/einaudi.jpeg" alt="album-cover">
+                                    <a href="#"><i class="fa-regular fa-circle-play"></i></a>
+                                </div>
+                                <a href="#" class="title">Ludovico Einaudi</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>                
+
+
             </div>
         </div>
     </main>

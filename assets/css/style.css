@@ -45,12 +45,6 @@
     display: none;
 }
 
-.debug .card{
-    height: 150px;
-    background-color: rgba(0, 255, 255, 0.462);
-    margin-bottom: 2rem;
-}
-
 .debug footer > div{
     background-color: rgba(137, 43, 226, 0.464);
     height: 100%;
@@ -67,10 +61,19 @@
     --s-upgrade-bar-height: 90px;
     --s-upgrade-bar-color: #00010167;
     --s-font-family: 'Montserrat', sans-serif;
+    --s-font-secondary-color: #a3a2a2;
+    --s-font-weight-nav: 600;
+    --s-font-size-section: 1.625rem;
+    --s-font-weight-section: 800;
+    --s-font-size-album-title: 16px;
+    --s-font-weight-album-title: 700;
+    --s-font-size-album-author: 12px;
+    --s-font-weight-album-author: 600;
 }
 
 body{
     font-family: var(--s-font-family);
+    letter-spacing: -0.05rem;
 }
 
 main{
@@ -79,16 +82,30 @@ main{
 
 nav{
     text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav a{
+    color: white;
+    text-transform: uppercase;
+    color: var(--s-font-secondary-color);
+    font-weight: var(--s-font-weight-nav);
+    margin: 0 0.5rem;
+    line-height: 4rem;
 }
 
 .row{
     display: flex;
-    margin: 0 -1rem;
+    margin: 0 -0.5rem;
     flex-wrap: wrap;
 }
 
 [class^="col-"]{
-    padding: 0 1rem;
+    padding: 0 0.5rem;
 }
 
 .col-2{
@@ -97,6 +114,12 @@ nav{
 
 .flex{
     display: flex;
+}
+
+h2{
+    font-size: var(--s-font-size-section);
+    font-weight: var(--s-font-weight-section);
+    color: white;
 }
 
 footer{
@@ -135,7 +158,7 @@ footer{
 
 .principal{
     overflow: auto;
-    padding: 1rem;
+    padding: 0 1.5rem 1.5rem;
     height: calc(100vh - var(--s-upgrade-bar-height) - var(--s-footer-height));
 }
 
@@ -144,6 +167,61 @@ footer{
     background-color: var(--s-upgrade-bar-color);
 
 }
+
+.name-section{
+    margin-bottom: 2rem;
+}
+
+.card{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.card img{
+    width: 100%;
+    display: flex;
+}
+
+.cover{
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.cover a{
+    position: absolute;
+    color: white;
+    font-size: 4rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.cover img:hover{
+    filter: brightness(50%);
+}
+
+.cover img:hover + a{
+    display: block;
+}
+
+.title{
+    font-size: var(--s-font-size-album-title);
+    font-weight: var(--s-font-weight-album-title);
+    color: white;
+}
+
+.author{
+    font-size: var(--s-font-size-album-author);
+    color: var(--s-font-secondary-color);
+    font-weight: var(--s-font-weight-album-author);
+    margin-top: 0.5rem;
+}
+
+#artists img{
+    clip-path: circle();
+}
+
 /* #endregion main */
 
 /* #region footer */
