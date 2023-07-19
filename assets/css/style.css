@@ -53,6 +53,7 @@
 
 /* #region utilities */
 :root{
+    --s-accent: #adfe2e;
     --s-sidebar-color: #000101;
     --s-sidebar-width: 230px;
     --s-right-side-color: #151822;
@@ -81,8 +82,10 @@ main{
 }
 
 nav{
-    text-align: center;
     margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 a{
@@ -96,6 +99,10 @@ nav a{
     font-weight: var(--s-font-weight-nav);
     margin: 0 0.5rem;
     line-height: 4rem;
+}
+
+nav a:hover{
+    color: white;
 }
 
 .row{
@@ -143,10 +150,6 @@ footer{
     justify-content: space-between;
 }
 
-.sidebar-up{
-
-}
-
 .logo-xs{
     display: none;
 }
@@ -156,16 +159,46 @@ footer{
     width: 100%;
 }
 
+.upgrade-bar{
+    height: var(--s-upgrade-bar-height);
+    background-color: var(--s-upgrade-bar-color);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+.btn-upgrade{
+    color: white;
+    text-transform: uppercase;
+    font-weight: var(--s-font-weight-nav);
+    border: 2px solid white;
+    padding: 0.5rem 3rem;
+    border-radius: 2rem;
+}
+
+.btn-upgrade:hover{
+    transform: scale(1.1);
+}
+
 .principal{
     overflow: auto;
     padding: 0 1.5rem 1.5rem;
     height: calc(100vh - var(--s-upgrade-bar-height) - var(--s-footer-height));
 }
 
-.upgrade-bar{
-    height: var(--s-upgrade-bar-height);
-    background-color: var(--s-upgrade-bar-color);
+.underline-nav{
+    position: relative;
+}
 
+.underline-nav hr{
+    width: 30px;
+    border: 0;
+    border-top: 2px solid var(--s-accent);
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 .name-section{
@@ -247,6 +280,10 @@ footer{
 
 /* #region resp-xs */
 @media screen and (max-width: 552px){
+    body{
+        min-width: 340px;
+    }
+
     .sidebar{
         width: 50px;
     }
