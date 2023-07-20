@@ -508,7 +508,7 @@ footer{
 
 .footer-right i{
     display: block;
-    color: wheat;
+    color: white;
     margin-right: 1rem;
     font-size: 0.75rem;
 }
@@ -596,7 +596,7 @@ footer{
 /* #region resp-xs */
 @media screen and (max-width: 576px){
     body{
-        min-width: 430px;
+        min-width: 406px;
     }
 
     .sidebar{
@@ -635,12 +635,20 @@ footer{
         align-items: center;
     }
 
+    .player-description{
+        margin-right: 0.5rem;
+    }
+
     .center-footer{
         margin: 0 0.5rem;
     }
 
     .center-footer-up a{
         margin: 0 0.5rem;
+    }
+
+    .footer-right i{
+        margin-right: 0.5rem;
     }
 
     .volume-line{
