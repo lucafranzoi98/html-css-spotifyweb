@@ -505,6 +505,55 @@ footer{
 .player-line:hover::after{
     display: block;
 }
+
+.footer-right i{
+    display: block;
+    color: wheat;
+    margin-right: 1rem;
+    font-size: 0.75rem;
+}
+
+.volume-line{
+    width: 100px;
+    background-color: var(--s-player-line-color);
+    height: 5px;
+    border-radius: 1rem;
+    position: relative;
+}
+
+
+.volume-line::before{
+    content: "";
+    width: 30%;
+    background-color: var(--s-font-secondary-color);
+    height: 5px;
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.volume-line:hover::before{
+    background-color: var(--s-accent);
+}
+
+.volume-line::after{
+    content: "";
+    width: 0.75rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(0px - 0.375rem + 2.5px);
+    left: calc(30% - 0.5rem);
+    background-color: white;
+    z-index: 11;
+    display: none;
+}
+
+.volume-line:hover::after{
+    display: block;
+}
 /* #endregion footer */
 
 /* #region resp-md */
@@ -525,13 +574,29 @@ footer{
     .footer-left-icon{
         flex-direction: column;
     }
+
+    .volume-line{
+        width: 80px;
+    }
+
+    .footer-right-icon{
+        flex-direction: column;
+    }
+
+    .footer-left-icon a:first-child{
+        margin-right: 0;
+    }
+
+    .fa-list-ul{
+        margin-bottom: 0.5rem;
+    }
 }
 /* #endregion resp-s */
 
 /* #region resp-xs */
 @media screen and (max-width: 576px){
     body{
-        min-width: 340px;
+        min-width: 430px;
     }
 
     .sidebar{
@@ -568,6 +633,18 @@ footer{
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .center-footer{
+        margin: 0 0.5rem;
+    }
+
+    .center-footer-up a{
+        margin: 0 0.5rem;
+    }
+
+    .volume-line{
+        width: 60px;
     }
 }
 
