@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    transition-duration: 0.3s;
 }
 
 /* #region utilities */
@@ -73,12 +74,10 @@ a{
 }
 
 nav a{
-    color: white;
     text-transform: uppercase;
     color: var(--s-font-secondary-color);
     font-weight: var(--s-font-weight-nav);
-    margin: 0 0.5rem;
-    margin-bottom: 2rem;
+    margin: 0 0.5rem 2rem;
 }
 
 nav a:hover{
@@ -109,6 +108,14 @@ h2{
     color: white;
 }
 
+.op-50{
+    filter: opacity(50%)
+}
+
+.op-50:hover{
+    filter: opacity(100%);
+}
+
 footer{
     height: var(--s-footer-height);
     background-color: var(--s-footer-color);
@@ -117,15 +124,12 @@ footer{
     padding: 1rem 0.5rem;
     align-items: center;
 }
-
-
 /* #endregion utilities */
 
 /* #region main */
 .sidebar{
     background-color: var(--s-sidebar-color);
     width: var(--s-sidebar-width);
-    height: 100%;
     flex-direction: column;
     justify-content: space-between;
     padding: 1rem;
@@ -158,20 +162,10 @@ footer{
     margin-bottom: 0.75rem;
 }
 
-.sidebar a:hover{
-    color: white;
-}
-
 .sidebar-menu img{
     margin-right: 0.5rem;
-    font-size: 1.5rem;
     width: 1.5rem;
     vertical-align: middle;
-    filter: opacity(50%);
-}
-
-.sidebar-menu a:first-child img{
-    filter: opacity(1);
 }
 
 .sidebar-menu a:first-child{
@@ -179,6 +173,10 @@ footer{
     border-left: 2px solid var(--s-accent);
     margin-left: -1rem;
     padding-left: 1rem;
+}
+
+.sidebar a:hover{
+    color: white;
 }
 
 .sidebar-menu-xs{
@@ -202,7 +200,7 @@ footer{
 }
 
 .create-playlist a{
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .create-playlist i{
@@ -232,10 +230,6 @@ footer{
     vertical-align: middle;
 }
 
-.sidebar-user a:first-child img{
-    filter: opacity(50%);
-}
-
 .sidebar-user hr{
     margin: 0.75rem 0;
     border: 0;
@@ -243,7 +237,6 @@ footer{
 }
 
 .sidebar-user a:last-child{
-    color: white;
     font-size: 1rem;
     font-weight: 700;
 }
@@ -296,7 +289,9 @@ footer{
 }
 
 .btn-upgrade:hover{
-    transform: scale(1.1);
+    border: 2px solid var(--s-accent);
+    color: var(--s-upgrade-bar-color);
+    background-color: var(--s-accent);
 }
 
 .principal{
@@ -375,6 +370,10 @@ footer{
     color: white;
 }
 
+.title:hover{
+    text-decoration: underline;
+}
+
 .author{
     font-size: var(--s-font-size-album-author);
     color: var(--s-font-secondary-color);
@@ -446,8 +445,13 @@ footer{
 }
 
 .center-footer-up a{
-    color: white;
+    color: var(--s-font-secondary-color);
     margin: 0 1rem;
+    transition-duration: 0s;
+}
+
+.center-footer-up a:hover{
+    color: white;
 }
 
 .center-footer-up .fa-circle-play{
@@ -508,9 +512,13 @@ footer{
 
 .footer-right i{
     display: block;
-    color: white;
+    color: var(--s-font-secondary-color);
     margin-right: 1rem;
     font-size: 0.75rem;
+}
+
+.footer-right i:hover{
+    color: white;
 }
 
 .volume-line{
@@ -520,7 +528,6 @@ footer{
     border-radius: 1rem;
     position: relative;
 }
-
 
 .volume-line::before{
     content: "";
@@ -561,6 +568,10 @@ footer{
     .col-md-3{
         width: calc(100% / 12 * 3);
     }
+
+    .col-md-0{
+        display: none;
+    }
 }
 
 /* #endregion resp-md */
@@ -569,6 +580,10 @@ footer{
 @media screen and (max-width: 768px){
     .col-s-6{
         width: 50%;
+    }
+
+    .col-s-0{
+        display: none;
     }
 
     .footer-left-icon{
@@ -635,12 +650,16 @@ footer{
         align-items: center;
     }
 
+    .footer-left img{
+        margin-right: 0.5rem;
+    }
+
     .player-description{
         margin-right: 0.5rem;
     }
 
     .center-footer{
-        margin: 0 0.5rem;
+        margin: 0 0.75rem;
     }
 
     .center-footer-up a{
