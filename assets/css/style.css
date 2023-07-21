@@ -62,7 +62,7 @@ main{
 }
 
 nav{
-    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -78,7 +78,7 @@ nav a{
     color: var(--s-font-secondary-color);
     font-weight: var(--s-font-weight-nav);
     margin: 0 0.5rem;
-    line-height: 4rem;
+    margin-bottom: 2rem;
 }
 
 nav a:hover{
@@ -129,6 +129,7 @@ footer{
     flex-direction: column;
     justify-content: space-between;
     padding: 1rem;
+    overflow: hidden;
 }
 
 .logo{
@@ -166,22 +167,18 @@ footer{
     font-size: 1.5rem;
     width: 1.5rem;
     vertical-align: middle;
+    filter: opacity(50%);
+}
+
+.sidebar-menu a:first-child img{
+    filter: opacity(1);
 }
 
 .sidebar-menu a:first-child{
     color: white;
-    position: relative;
-}
-
-.sidebar-menu a:first-child:after{
-    content: "";
-    border: 0;
-    border-top: 2px solid var(--s-accent);
-    width: 1.7rem;
-    position: absolute;
-    transform: rotate(90deg);
-    top: 50%;
-    left: -1.75rem;
+    border-left: 2px solid var(--s-accent);
+    margin-left: -1rem;
+    padding-left: 1rem;
 }
 
 .sidebar-menu-xs{
@@ -219,7 +216,6 @@ footer{
     flex-direction: column;
     overflow: auto;
     height: calc(100vh - 500px);
-    /* height: calc(100% - hsidebar-down - hlogo - hsideabrmenu) */
 }
 
 .playlist-list a{
@@ -234,6 +230,10 @@ footer{
     width: 1rem;
     margin-right: 0.5rem;
     vertical-align: middle;
+}
+
+.sidebar-user a:first-child img{
+    filter: opacity(50%);
 }
 
 .sidebar-user hr{
@@ -313,9 +313,9 @@ footer{
     content: "";
     width: 30px;
     border: 0;
-    border-top: 2px solid var(--s-accent);
+    border-bottom: 2px solid var(--s-accent);
     position: absolute;
-    top: 70%;
+    bottom: -0.25rem;
     left: 50%;
     transform: translate(-50%, 0);
 }
